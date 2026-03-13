@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+
+</head>
+
+<body>
+
+<a-scene
+mindar-image="imageTargetSrc: targets.mind"
+embedded
+color-space="sRGB"
+device-orientation-permission-ui="enabled"
+vr-mode-ui="enabled">
+
+<a-camera position="0 0 0"></a-camera>
+
+<a-entity mindar-image-target="targetIndex: 0">
+
+<a-text
+value="Your Fortune Appears"
+color="yellow"
+position="0 0.3 0"
+align="center">
+</a-text>
+
+<a-box
+color="purple"
+depth="0.2"
+height="0.2"
+width="0.2"
+position="0 0 0">
+</a-box>
+
+</a-entity>
+
+</a-scene>
+
+</body>
+</html>
+Step 4 — Put files together
+
+Your folder should contain:
+
+index.html
+targets.mind
+symbol.jpg
+Step 5 — Upload to GitHub Pages
+
+Just like your audio project.
+
+Create a new repo
+
+Upload the files
+
+Enable GitHub Pages
+
+You’ll get a link like:
+
+https://yourname.github.io/fortune-ar
+Step 6 — Test it
+
+Open the webpage on your phone
+
+Allow camera access
+
+Point the camera at the symbol on the chatterbox
+
+You should see:
+
+floating text
+
+a purple cube
+
+attached to the paper.
+
+Step 7 — Expand to the full fortune teller
+
+Now you can add more images to different panels.
+
+Example layout:
+
+panel 1 → star
+panel 2 → eye
+panel 3 → spiral
+panel 4 → bird
+
+Each one triggers a different AR fortune.
+
+What you now have
+
+Your chatterbox becomes:
+
+paper interface
+        ↓
+image recognition
+        ↓
+AR fortune
+
+The origami object controls the digital layer.
+
+💡 Important tip:
+AR tracking works best if the image has:
+
+contrast
+
+texture
+
+uneven shapes
+
+Flat shapes like plain circles or squares don’t track well.
+
+If you want, I can also show you a really good chatterbox layout specifically designed for AR tracking, which will save you a lot of frustration when the camera tries to recognise the images.
